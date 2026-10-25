@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export const accountNumber = '8940256793';
+export const gpayNumber = '89402 56793';
 export const offerPrice = '₹99';
 
 const paymentSteps = [
-  'Copy the account number shown below.',
-  'Open your mobile banking or bank app.',
+  'Copy the GPay number shown below.',
+  'Open Google Pay or another UPI app.',
   `Send the offer price of ${offerPrice} to this number.`,
   'Share the transaction ID after payment.',
 ];
@@ -15,8 +15,8 @@ const PaymentPage = ({ onBack }) => {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(accountNumber);
-      setMessage('Account number copied successfully.');
+      await navigator.clipboard.writeText(gpayNumber.replace(/\s+/g, ''));
+      setMessage('GPay number copied successfully.');
     } catch (error) {
       setMessage('Copy failed. Please copy the number manually.');
     }
@@ -47,8 +47,8 @@ const PaymentPage = ({ onBack }) => {
         </div>
 
         <div className="account-box" aria-live="polite">
-          <span className="label">Account Number</span>
-          <div className="account-number">{accountNumber}</div>
+          <span className="label">G-Pay Number</span>
+          <div className="account-number">{gpayNumber}</div>
         </div>
 
         <button className="copy-btn" onClick={handleCopy} type="button">

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { accountNumber, offerPrice } from './PaymentPage';
+import { gpayNumber, offerPrice } from './PaymentPage';
 
 const stats = [
   { value: '25k+', label: 'happy couples' },
@@ -135,12 +135,12 @@ const Home = ({ onPayment }) => {
             <strong>{offerPrice}</strong>
           </div>
           <div className="home-payment-detail">
-            <span className="label">Account Number</span>
-            <strong>{accountNumber}</strong>
+            <span className="label">GPay Number</span>
+            <strong>{gpayNumber}</strong>
           </div>
         </div>
         <p className="home-payment-note">
-          Transfer {offerPrice} to the account number above, then share your transaction ID.
+          Transfer {offerPrice} using the GPay number above, then share your transaction ID.
         </p>
       </section>
 
