@@ -1,5 +1,25 @@
-# Vue 3 + Vite
+# Acasha Matrimony
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Acasha Matrimony is a React app built with Vite.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Local development
+
+From this directory, install dependencies and start the development server:
+
+```sh
+npm install
+npm run dev
+```
+
+## Production build
+
+```sh
+npm run build
+```
+
+The production files are written to `dist/`.
+
+## Netlify
+
+The repository-root `netlify.toml` configures Netlify to build from `Frontend/`
+with `npm run build` and publish `dist/`.

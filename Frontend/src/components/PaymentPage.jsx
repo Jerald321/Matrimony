@@ -33,6 +33,11 @@ const PaymentPage = ({ onBack }) => {
           <p className="subtext">
             Please copy this number and send the money from your preferred banking app.
           </p>
+          {onBack && (
+            <button className="secondary-btn light" type="button" onClick={onBack}>
+              Back to home
+            </button>
+          )}
         </div>
 
         <div className="account-box" aria-live="polite">

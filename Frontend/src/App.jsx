@@ -1,13 +1,14 @@
-import React from "react";
+import { useState } from "react";
 import Home from "./components/Home";
 import PaymentPage from "./components/PaymentPage";
 
 const App = () => {
-  return (
-    <div>
-      <Home />
-      <PaymentPage />
-    </div>
+  const [showPaymentPage, setShowPaymentPage] = useState(false);
+
+  return showPaymentPage ? (
+    <PaymentPage onBack={() => setShowPaymentPage(false)} />
+  ) : (
+    <Home onPayment={() => setShowPaymentPage(true)} />
   );
 };
 

@@ -42,10 +42,10 @@ const Home = ({ onPayment }) => {
           <a href="#matches" onClick={() => setMenuOpen(false)}>Matches</a>
         </nav>
 
-        {/* <div className="topbar-actions">
-          <button className="ghost-btn">Login</button>
-          <button className="primary-btn" onClick={onPayment}>Pay Now</button>
-        </div> */}
+        <div className="topbar-actions">
+          <button className="ghost-btn" type="button">Login</button>
+          <button className="primary-btn" type="button" onClick={onPayment}>Pay Now</button>
+        </div>
 
         <button
           type="button"
@@ -71,8 +71,8 @@ const Home = ({ onPayment }) => {
           </p>
 
           <div className="cta-row">
-            <button className="primary-btn">Create free profile</button>
-            <button className="secondary-btn" onClick={onPayment}>View payment page</button>
+            <button className="primary-btn" type="button">Create free profile</button>
+            <button className="secondary-btn" type="button" onClick={onPayment}>View payment page</button>
           </div>
 
           <div className="hero-metrics" aria-label="Site statistics">
