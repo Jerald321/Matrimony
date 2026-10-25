@@ -155,6 +155,33 @@ textarea:focus-visible {
   line-height: 1.7;
 }
 
+.offer-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  max-width: 620px;
+  padding: 18px 20px;
+  border: 1px solid rgba(223, 171, 188, 0.7);
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fff 0%, #fff4f7 100%);
+}
+
+.offer-price-box .label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.offer-price-box strong {
+  color: var(--brand-dark);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+}
+
 .account-box {
   margin: 30px auto 0;
   max-width: 620px;

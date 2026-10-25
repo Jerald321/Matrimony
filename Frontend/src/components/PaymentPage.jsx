@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-const accountNumber = '6379179214';
+const accountNumber = ' 8940256793';
+const offerPrice = '₹99';
 
 const paymentSteps = [
   'Copy the account number shown below.',
   'Open your mobile banking or bank app.',
-  'Send the payment to this number.',
+  `Send the offer price of ${offerPrice} to this number.`,
   'Share the transaction ID after payment.',
 ];
 
@@ -31,13 +32,18 @@ const PaymentPage = ({ onBack }) => {
           <p className="eyebrow">Secure payment</p>
           <h1>Send your payment to continue</h1>
           <p className="subtext">
-            Please copy this number and send the money from your preferred banking app.
+            Please pay the offer price of {offerPrice}. Copy this number and send the money from your preferred banking app.
           </p>
           {onBack && (
             <button className="secondary-btn light" type="button" onClick={onBack}>
               Back to home
             </button>
           )}
+        </div>
+
+        <div className="offer-price-box">
+          <span className="label">Offer Price</span>
+          <strong>{offerPrice}</strong>
         </div>
 
         <div className="account-box" aria-live="polite">

@@ -43,7 +43,7 @@ const Home = ({ onPayment }) => {
         </nav>
 
         <div className="topbar-actions">
-          <button className="ghost-btn" type="button">Login</button>
+          
           <button className="primary-btn" type="button" onClick={onPayment}>Pay Now</button>
         </div>
 
