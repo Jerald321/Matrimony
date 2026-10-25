@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { accountNumber, offerPrice } from './PaymentPage';
 
 const stats = [
   { value: '25k+', label: 'happy couples' },
@@ -41,11 +42,6 @@ const Home = ({ onPayment }) => {
           <a href="#stories" onClick={() => setMenuOpen(false)}>Stories</a>
           <a href="#matches" onClick={() => setMenuOpen(false)}>Matches</a>
         </nav>
-
-        <div className="topbar-actions">
-          
-          <button className="primary-btn" type="button" onClick={onPayment}>Pay Now</button>
-        </div>
 
         <button
           type="button"
@@ -128,8 +124,28 @@ const Home = ({ onPayment }) => {
         </div>
       </section>
 
+      <section className="home-payment-section" id="payment">
+        <div className="section-heading">
+          <span className="eyebrow">Payment details</span>
+          <h2>Simple, secure payment to get started.</h2>
+        </div>
+        <div className="home-payment-details">
+          <div className="home-payment-detail">
+            <span className="label">Offer Price</span>
+            <strong>{offerPrice}</strong>
+          </div>
+          <div className="home-payment-detail">
+            <span className="label">Account Number</span>
+            <strong>{accountNumber}</strong>
+          </div>
+        </div>
+        <p className="home-payment-note">
+          Transfer {offerPrice} to the account number above, then share your transaction ID.
+        </p>
+      </section>
+
       <section className="process-section" id="stories">
-        <div className="section-heading left-aligned">
+        <div className="section-heading">
           <span className="eyebrow">How it works</span>
           <h2>Your journey to love starts in three simple steps.</h2>
         </div>

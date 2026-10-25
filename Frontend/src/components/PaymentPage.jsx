@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const accountNumber = ' 8940256793';
-const offerPrice = '₹99';
+export const accountNumber = '8940256793';
+export const offerPrice = '₹99';
 
 const paymentSteps = [
   'Copy the account number shown below.',
@@ -15,7 +15,7 @@ const PaymentPage = ({ onBack }) => {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(accountNumber.replace(/\s+/g, ''));
+      await navigator.clipboard.writeText(accountNumber);
       setMessage('Account number copied successfully.');
     } catch (error) {
       setMessage('Copy failed. Please copy the number manually.');
