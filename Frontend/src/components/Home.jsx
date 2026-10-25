@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const stats = [
   { value: '25k+', label: 'happy couples' },
   { value: '4.9/5', label: 'member rating' },
@@ -26,22 +28,37 @@ const steps = [
 ];
 
 const Home = ({ onPayment }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="matrimony-page">
       <header className="topbar">
         <div className="brand">Acasha Matrimony</div>
 
-        <nav className="nav-links" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#stories">Stories</a>
-          <a href="#matches">Matches</a>
+        <nav className={`nav-links${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
+          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#stories" onClick={() => setMenuOpen(false)}>Stories</a>
+          <a href="#matches" onClick={() => setMenuOpen(false)}>Matches</a>
         </nav>
 
-        <div className="topbar-actions">
+        {/* <div className="topbar-actions">
           <button className="ghost-btn">Login</button>
           <button className="primary-btn" onClick={onPayment}>Pay Now</button>
-        </div>
+        </div> */}
+
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
 
       <main className="hero" id="home">
