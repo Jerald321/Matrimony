@@ -23,9 +23,18 @@ const features = [
 ];
 
 const steps = [
-  'Create your profile',
-  'Connect with compatible people',
-  'Meet with confidence',
+  {
+    title: 'Create Your Profile & Get Started',
+    text: 'Register your profile by paying just ₹99. Share your basic details, preferences, and expectations so we can understand the kind of partner you are looking for.',
+  },
+  {
+    title: 'Discover Your Match',
+    text: 'We will find a compatible profile based on your preferences and share the matching profile with you. Review the details and let us know whether you are interested in proceeding.',
+  },
+  {
+    title: 'Connect & Meet with Confidence',
+    text: 'If both customers are interested, we will help arrange a phone conversation or a live meeting through our platform. You can communicate, understand each other better, and decide whether you would like to take the next step.',
+  },
 ];
 
 const Home = ({ onPayment }) => {
@@ -39,7 +48,7 @@ const Home = ({ onPayment }) => {
         <nav className={`nav-links${menuOpen ? ' is-open' : ''}`} id="main-navigation" aria-label="Main navigation">
           <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#stories" onClick={() => setMenuOpen(false)}>Stories</a>
+          <a href="#how-it-works" onClick={() => setMenuOpen(false)}>How it works</a>
           <a href="#matches" onClick={() => setMenuOpen(false)}>Matches</a>
         </nav>
 
@@ -144,24 +153,27 @@ const Home = ({ onPayment }) => {
         </p>
       </section>
 
-      <section className="process-section" id="stories">
+      <section className="process-section" id="how-it-works">
         <div className="section-heading">
           <span className="eyebrow">How it works</span>
-          <h2>Your journey to love starts in three simple steps.</h2>
+          <h2>Your Match, Your Choice, Our Support.</h2>
         </div>
 
         <div className="process-grid">
           {steps.map((step, index) => (
-            <div key={step} className="process-card">
+            <article key={step.title} className="process-card">
               <span className="step-number">0{index + 1}</span>
-              <h3>{step}</h3>
-              <p>
-                Build a genuine profile, meet people who match your values, and take the next
-                step toward a meaningful future together.
-              </p>
-            </div>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
           ))}
         </div>
+
+        <p className="process-note">
+          We guide you through every step, from registration to connecting with a compatible
+          partner.
+          <strong> Simple. Transparent. Focused on meaningful relationships.</strong>
+        </p>
       </section>
     </div>
   );
