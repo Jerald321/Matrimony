@@ -126,6 +126,37 @@ textarea:focus-visible {
   padding: 38px 32px;
 }
 
+.payment-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 28px;
+  padding: 10px 16px 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.payment-back-btn:hover {
+  transform: translateX(-2px);
+  border-color: rgba(233, 79, 121, 0.35);
+  background: var(--panel-soft);
+}
+
+.payment-back-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .payment-intro {
   text-align: center;
   margin-bottom: 24px;
@@ -140,9 +171,13 @@ textarea:focus-visible {
   font-size: 0.72rem;
 }
 
+.payment-intro .eyebrow {
+  font-size: 0.68rem;
+}
+
 .payment-intro h1 {
   margin: 0;
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
   line-height: 1.08;
   letter-spacing: -0.06em;
 }
@@ -151,7 +186,7 @@ textarea:focus-visible {
   margin: 12px auto 0;
   max-width: 560px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
@@ -170,7 +205,7 @@ textarea:focus-visible {
 
 .offer-price-box .label {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -178,7 +213,7 @@ textarea:focus-visible {
 
 .offer-price-box strong {
   color: var(--brand-dark);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
   line-height: 1;
 }
 
@@ -196,7 +231,7 @@ textarea:focus-visible {
 .account-box .label {
   display: block;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -204,7 +239,7 @@ textarea:focus-visible {
 }
 
 .account-number {
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
   font-weight: 800;
   letter-spacing: 0.12em;
   color: var(--text);
@@ -220,7 +255,7 @@ textarea:focus-visible {
   background: linear-gradient(135deg, var(--brand) 0%, #f56b96 100%);
   color: #fff;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   box-shadow: 0 18px 32px rgba(233, 79, 121, 0.25);
   transition: transform 0.2s ease;
 }
@@ -234,6 +269,7 @@ textarea:focus-visible {
   text-align: center;
   color: var(--success);
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .process-box {
@@ -246,7 +282,7 @@ textarea:focus-visible {
 
 .process-box h2 {
   margin: 0 0 20px;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
 }
 
 .process-box ol {
@@ -278,12 +314,13 @@ textarea:focus-visible {
   background: var(--brand-soft);
   color: var(--brand-dark);
   font-weight: 800;
+  font-size: 0.9rem;
 }
 
 .process-box li p {
   margin: 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
@@ -331,6 +368,11 @@ textarea:focus-visible {
   transform: translateY(-1px);
 }
 
+.matrimony-page .primary-btn,
+.matrimony-page .secondary-btn {
+  font-size: 0.92rem;
+}
+
 .matrimony-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -346,7 +388,7 @@ textarea:focus-visible {
 }
 
 .brand {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -367,6 +409,7 @@ textarea:focus-visible {
   text-decoration: none;
   color: var(--muted);
   font-weight: 600;
+  font-size: 0.92rem;
 }
 
 .topbar-actions {
@@ -398,12 +441,12 @@ textarea:focus-visible {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
 }
 
 .hero-copy h1 {
   margin: 20px 0 18px;
-  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
   line-height: 1.04;
   letter-spacing: -0.06em;
   color: #1d1720;
@@ -412,7 +455,7 @@ textarea:focus-visible {
 .hero-copy p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.08rem;
+  font-size: 0.98rem;
   line-height: 1.8;
   max-width: 560px;
 }
@@ -459,7 +502,7 @@ textarea:focus-visible {
 
 .home-payment-detail .label {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -467,7 +510,7 @@ textarea:focus-visible {
 
 .home-payment-detail strong {
   color: var(--brand-dark);
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   overflow-wrap: anywhere;
 }
 
@@ -476,6 +519,7 @@ textarea:focus-visible {
   color: var(--muted);
   text-align: center;
   line-height: 1.7;
+  font-size: 0.92rem;
 }
 
 .metric-item {
@@ -485,13 +529,13 @@ textarea:focus-visible {
 }
 
 .metric-item strong {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--text);
 }
 
 .metric-item span {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .hero-visual {
@@ -564,13 +608,14 @@ textarea:focus-visible {
 
 .profile-content h3 {
   margin: 0 0 6px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .profile-content p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+  font-size: 0.92rem;
 }
 
 .floating-card {
@@ -589,7 +634,7 @@ textarea:focus-visible {
 .mini-card .label {
   display: block;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -597,13 +642,14 @@ textarea:focus-visible {
 .rating-card strong {
   display: block;
   margin: 12px 0 8px;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   letter-spacing: -0.06em;
 }
 
 .rating-card small {
   color: var(--muted);
   line-height: 1.6;
+  font-size: 0.82rem;
 }
 
 .mini-card {
@@ -662,7 +708,7 @@ textarea:focus-visible {
 .eyebrow {
   display: inline-block;
   color: var(--brand-dark);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -671,7 +717,7 @@ textarea:focus-visible {
 
 .section-heading h2 {
   margin: 0;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
@@ -715,7 +761,7 @@ textarea:focus-visible {
 .feature-card h3,
 .process-card h3 {
   margin: 0 0 10px;
-  font-size: 1.35rem;
+  font-size: 1.18rem;
 }
 
 .feature-card p,
@@ -723,6 +769,7 @@ textarea:focus-visible {
   margin: 0;
   color: var(--muted);
   line-height: 1.8;
+  font-size: 0.92rem;
 }
 
 .process-grid {
@@ -750,6 +797,7 @@ textarea:focus-visible {
   color: var(--muted);
   line-height: 1.8;
   text-align: center;
+  font-size: 0.92rem;
 }
 
 .process-note strong {
@@ -768,6 +816,7 @@ textarea:focus-visible {
   background: linear-gradient(135deg, #ffe1ec, #fbd7a6);
   color: var(--brand-dark);
   font-weight: 800;
+  font-size: 0.9rem;
   margin-bottom: 18px;
   flex: 0 0 auto;
 }
@@ -781,7 +830,7 @@ textarea:focus-visible {
   }
 
   .brand {
-    font-size: clamp(1rem, 3vw, 1.35rem);
+    font-size: clamp(0.95rem, 3vw, 1.2rem);
     letter-spacing: 0.04em;
   }
 
@@ -1123,7 +1172,7 @@ textarea:focus-visible {
   }
 
   .brand {
-    font-size: clamp(0.95rem, 5vw, 1.2rem);
+    font-size: clamp(0.9rem, 4.5vw, 1.05rem);
     overflow-wrap: anywhere;
   }
 
@@ -1161,12 +1210,12 @@ textarea:focus-visible {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.25rem, 10vw, 3rem);
+    font-size: clamp(2rem, 9vw, 2.6rem);
     line-height: 1.08;
   }
 
   .hero-copy p {
-    font-size: 1rem;
+    font-size: 0.92rem;
     line-height: 1.7;
   }
 
@@ -1177,11 +1226,11 @@ textarea:focus-visible {
   }
 
   .metric-item strong {
-    font-size: clamp(1.15rem, 5vw, 1.45rem);
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
   }
 
   .metric-item span {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
 
   .hero-visual {
@@ -1228,7 +1277,7 @@ textarea:focus-visible {
   }
 
   .section-heading h2 {
-    font-size: clamp(1.75rem, 8vw, 2.3rem);
+    font-size: clamp(1.55rem, 7vw, 2rem);
   }
 
   .feature-grid,
@@ -1311,7 +1360,7 @@ textarea:focus-visible {
   }
 
   .payment-intro h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 

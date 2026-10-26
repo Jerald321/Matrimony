@@ -28,17 +28,21 @@ const PaymentPage = ({ onBack }) => {
     
 
       <main className="payment-card">
+        {onBack && (
+          <button className="payment-back-btn" type="button" onClick={onBack}>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m15 18-6-6 6-6M9 12h12" />
+            </svg>
+            <span>Back to home</span>
+          </button>
+        )}
+
         <div className="payment-intro">
           <p className="eyebrow">Secure payment</p>
           <h1>Send your payment to continue</h1>
           <p className="subtext">
             Please pay the offer price of {offerPrice}. Copy this number and send the money from your preferred banking app.
           </p>
-          {onBack && (
-            <button className="secondary-btn light" type="button" onClick={onBack}>
-              Back to home
-            </button>
-          )}
         </div>
 
         <div className="offer-price-box">
