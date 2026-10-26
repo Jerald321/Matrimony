@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { gpayNumber, offerPrice } from './PaymentPage';
 
 const stats = [
-  { value: '25k+', label: 'happy couples' },
+  { value: '50+', label: 'happy couples' },
   { value: '4.9/5', label: 'member rating' },
   { value: '98%', label: 'profile verified' },
 ];
